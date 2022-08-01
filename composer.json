@@ -1,0 +1,21 @@
+{
+    "optimize-autoloader": true,
+    "name": "aidsoul/pdo",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aidsoul\\Pdo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aidsoul",
+            "email": "work-aidsoul@outlook.com",
+            "homepage": "https://github.com/aidsoul",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
