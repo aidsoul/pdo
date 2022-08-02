@@ -11,9 +11,9 @@ namespace Aidsoul\Pdo\Сonditions;
 class Where implements WhereInterface
 {
     /**
-     * @var array
+     * @var string
      */
-    private array $sql = [];
+    private string $sql;
 
     public function __construct(
         private string $column = '',
@@ -24,25 +24,17 @@ class Where implements WhereInterface
     /**
      * @return void
      */
-    private function set(): void
-    {
-        $this->sql[] = "{$this->column} {$this->whereType} ?";
-    }
-
-    /**
-     * @return void
-     */
     public function where(): void
     {
-        $this->sql[] = "WHERE";
+        $this->sql = 'WHERE';
     }
-
+    
     /**
      * @return void
      */
     public function and(): void
     {
-        $this->sql[] = "AND";
+        $this->sql = 'AND';
     }
 
     /**
@@ -50,7 +42,7 @@ class Where implements WhereInterface
      */
     public function or(): void
     {
-        $this->sql[] = "OR";
+        $this->sql = 'OR';
     }
 
     /**
@@ -58,7 +50,7 @@ class Where implements WhereInterface
      */
     public function get(): string
     {
-        $this->set();
-        return implode(' ', $this->sql);
+        $this->sql .= " {$this->column} {$this->whereType} ?";
+        return $this->sql;
     }
 }

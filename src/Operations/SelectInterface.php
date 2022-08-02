@@ -50,6 +50,12 @@ interface SelectInterface extends OperationInterface, WhereInterface
     public function limit(int $limit = 0): Select;
 
     /**
+     * @param integer $offset
+     * @return Select
+     */
+    public function offset(int $offset = 0): Select;
+
+    /**
      * @param string $leftColumn
      * @param string $rightColumn
      * @return Select

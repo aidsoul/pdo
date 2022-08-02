@@ -127,7 +127,18 @@ class Select extends Connect implements SelectInterface
      */
     public function limit(int $limit = 0): Select
     {
-        $this->query['limit'] = "LIMIT {$limit}";
+        $this->query['limit'][] = "LIMIT {$limit}";
+
+        return $this;
+    }
+
+    /**
+     * @param integer $limit
+     * @return Select
+     */
+    public function offset(int $offset = 0): Select
+    {
+        $this->query['limit'][] = "OFFSET {$offset}";
 
         return $this;
     }
@@ -160,13 +171,14 @@ class Select extends Connect implements SelectInterface
         } else {
             $columns = $this->query['columns'][0];
         }
-        $sql[] = "SELECT {$columns} FROM {$this->query['table']}";
-        $sql[] = implode(' ', $this->query['join'] ?? []);
-        $sql[] = implode(' ', $this->query['where'] ?? []);
-        $sql[] = implode(' ', $this->query['orderBy'] ?? []);
-        $sql[] = $this->query['limit'] ?? '';
 
-        return implode(' ', $sql);
+        $sql = "SELECT {$columns} FROM {$this->query['table']} ";
+        $sql .= implode(' ', $this->query['join'] ?? []) . ' ';
+        $sql .= implode(' ', $this->query['where'] ?? []) . ' ';
+        $sql .= implode(' ', $this->query['orderBy'] ?? []) . ' ';
+        $sql .= implode(' ', $this->query['limit'] ?? []);
+
+        return $sql;
     }
 
     /**
