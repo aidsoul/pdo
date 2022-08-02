@@ -11,9 +11,9 @@ namespace Aidsoul\Pdo\Сonditions;
 class Join implements JoinInterface
 {
     /**
-     * @var array
+     * @var string
      */
-    private array $sql = [];
+    private string $sql;
 
     /**
      * @param string $leftTable
@@ -35,11 +35,11 @@ class Join implements JoinInterface
      */
     private function on(): void
     {
-        $this->sql[] = $this->rightTable;
-        $this->sql[] = "ON";
-        $this->sql[] = "{$this->leftTable}.{$this->leftColumn}";
-        $this->sql[] = "=";
-        $this->sql[] = "{$this->rightTable}.{$this->rightColumn}";
+        $this->sql .= ' ' . $this->rightTable . ' ';
+        $this->sql .= 'ON ';
+        $this->sql .= "{$this->leftTable}.{$this->leftColumn} ";
+        $this->sql .= '= ';
+        $this->sql .= "{$this->rightTable}.{$this->rightColumn}";
     }
 
     /**
@@ -47,7 +47,7 @@ class Join implements JoinInterface
      */
     public function join(): void
     {
-        $this->sql[] = "JOIN";
+        $this->sql = "JOIN";
         $this->on();
     }
 
@@ -56,7 +56,7 @@ class Join implements JoinInterface
      */
     public function left(): void
     {
-        $this->sql[] = 'LEFT JOIN';
+        $this->sql = 'LEFT JOIN';
         $this->on();
     }
 
@@ -65,7 +65,7 @@ class Join implements JoinInterface
      */
     public function right(): void
     {
-        $this->sql[] = 'RIGHT JOIN';
+        $this->sql = 'RIGHT JOIN';
         $this->on();
     }
 
@@ -74,6 +74,6 @@ class Join implements JoinInterface
      */
     public function get(): string
     {
-        return implode(' ', $this->sql);
+        return $this->sql;
     }
 }
