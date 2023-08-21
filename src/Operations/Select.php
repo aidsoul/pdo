@@ -4,7 +4,7 @@ namespace Aidsoul\Pdo\Operations;
 
 use Aidsoul\Pdo\Connect;
 use Aidsoul\Pdo\Db;
-use Aidsoul\Pdo\Сonditions\Join;
+use Aidsoul\Pdo\Conditions\Join;
 
 /**
  * Class for constructing a select data request 

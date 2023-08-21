@@ -6,7 +6,7 @@ use Aidsoul\Pdo\Db;
 
 /**
  * Update operator interface
- * 
+ *
  * @license MIT
  * @author aidsoul <work-aidsoul@outlook.com>
  */

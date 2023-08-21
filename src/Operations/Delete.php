@@ -6,15 +6,15 @@ use Aidsoul\Pdo\Connect;
 use Aidsoul\Pdo\Db;
 
 /**
- * Class for constructing a deletion data request 
+ * Class for constructing a deletion data request
  *
  * @author aidsoul <work-aidsoul@outlook.com>
  * @license MIT
  */
 class Delete extends Connect implements DeleteInterface
 {
-
-    use WhereTrait, ExecuteTrait;
+    use WhereTrait;
+    use ExecuteTrait;
 
     /**
      * Stores data to form the query

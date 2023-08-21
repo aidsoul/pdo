@@ -12,7 +12,6 @@ use PDO;
  */
 abstract class Connect
 {
-
     public function __construct(protected PDO $dbh)
     {
     }
@@ -22,7 +21,7 @@ abstract class Connect
      *
      * @param string $query
      * @param array $params
-     * 
+     *
      * @return object
      */
     public function executeQuery(string $query = '', array $params = []): object

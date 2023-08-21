@@ -1,6 +1,6 @@
 <?php
 
-namespace Aidsoul\Pdo\Сonditions;
+namespace Aidsoul\Pdo\Conditions;
 
 /**
  * Join operator interface

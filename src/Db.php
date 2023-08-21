@@ -20,7 +20,6 @@ use PDO;
  */
 class Db extends PDO
 {
-
     /**
      * @param string            $dsn
      * @param string|null       $username
@@ -74,7 +73,7 @@ class Db extends PDO
 
     /**
      * Function to insert data into a database table
-     * 
+     *
      * @param array $columns
      * @return \Aidsoul\Pdo\Operations\InsertInterface
      */

@@ -4,7 +4,7 @@ namespace Aidsoul\Pdo\Operations;
 
 /**
  * Execute trait
- * 
+ *
  * @license MIT
  * @author aidsoul <work-aidsoul@outlook.com>
  */

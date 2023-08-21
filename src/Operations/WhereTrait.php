@@ -2,7 +2,7 @@
 
 namespace Aidsoul\Pdo\Operations;
 
-use Aidsoul\Pdo\Сonditions\Where;
+use Aidsoul\Pdo\Conditions\Where;
 
 trait WhereTrait
 {

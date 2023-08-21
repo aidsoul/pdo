@@ -1,9 +1,9 @@
 <?php
 
-namespace Aidsoul\Pdo\Сonditions;
+namespace Aidsoul\Pdo\Conditions;
 
 /**
- * Class for constructing a join 
+ * Class for constructing a join
  *
  * @author aidsoul <work-aidsoul@outlook.com>
  * @license MIT
@@ -26,7 +26,6 @@ class Join implements JoinInterface
         private string $rightTable = '',
         private string $leftColumn = '',
         private string $rightColumn = ''
-
     ) {
     }
 
