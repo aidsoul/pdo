@@ -76,7 +76,6 @@ class Insert extends Connect implements InsertInterface
                 $value .= ',?';
             }
         }
-
         return  "INSERT INTO {$this->query['table']} ({$columns}) VALUES ({$value})";
     }
 }

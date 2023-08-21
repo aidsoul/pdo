@@ -4,7 +4,7 @@ namespace Aidsoul\Pdo\Operations;
 
 /**
  * Where operator interface
- * 
+ *
  * @license MIT
  * @author aidsoul <work-aidsoul@outlook.com>
  */

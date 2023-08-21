@@ -6,7 +6,7 @@ use Aidsoul\Pdo\Db;
 
 /**
  * Delete operator interface
- * 
+ *
  * @license MIT
  * @author name <email>
  */

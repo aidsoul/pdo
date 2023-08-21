@@ -6,14 +6,15 @@ use Aidsoul\Pdo\Connect;
 use Aidsoul\Pdo\Db;
 
 /**
- * Class for constructing a update data request 
+ * Class for constructing a update data request
  *
  * @author aidsoul <work-aidsoul@outlook.com>
  * @license MIT
  */
 class Update extends Connect implements UpdateInterface
 {
-    use WhereTrait, ExecuteTrait;
+    use WhereTrait;
+    use ExecuteTrait;
 
     /**
      * @var array

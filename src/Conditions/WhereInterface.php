@@ -1,16 +1,15 @@
 <?php
 
-namespace Aidsoul\Pdo\Сonditions;
+namespace Aidsoul\Pdo\Conditions;
 
 /**
  * Where operator interface
- * 
+ *
  * @license MIT
  * @author name <email>
  */
 interface WhereInterface
 {
-
     /**
      * @param string $column
      * @param string $whereType

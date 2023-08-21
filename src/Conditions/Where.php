@@ -1,9 +1,9 @@
 <?php
 
-namespace Aidsoul\Pdo\Сonditions;
+namespace Aidsoul\Pdo\Conditions;
 
 /**
- * Class for constructing a where 
+ * Class for constructing a where
  *
  * @author aidsoul <work-aidsoul@outlook.com>
  * @license MIT
@@ -28,7 +28,7 @@ class Where implements WhereInterface
     {
         $this->sql = 'WHERE';
     }
-    
+
     /**
      * @return void
      */
